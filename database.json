@@ -1,4 +1,36 @@
 {
-  "products": []
-    
+  "products": [
+    {
+      "name": "PREDATOR TRITON 300",
+      "breed": "Аппл",
+      "price": "1231231",
+      "descr": "1312312",
+      "image": "https://rutradeonline.ru/wp-content/uploads/2021/01/53f7a5d0-1a6b-4e1e-ad00-698950e403bf.jpg",
+      "id": 1
+    },
+    {
+      "name": "Макбук",
+      "breed": "Laptop ",
+      "price": "1231231",
+      "descr": "q",
+      "image": "https://rutradeonline.ru/wp-content/uploads/2021/01/53f7a5d0-1a6b-4e1e-ad00-698950e403bf.jpg",
+      "id": 2
+    },
+    {
+      "name": "Макбук",
+      "breed": "Laptop ",
+      "price": "1231231",
+      "descr": "qweq",
+      "image": "https://rutradeonline.ru/wp-content/uploads/2021/01/53f7a5d0-1a6b-4e1e-ad00-698950e403bf.jpg",
+      "id": 3
+    },
+    {
+      "name": "Змея",
+      "breed": "Королевская кобрая",
+      "price": "89000",
+      "descr": "йуйц",
+      "image": "https://panteric.ru/files/gallery/5004/big/webdsc_4522-1_1635435085.jpg",
+      "id": 4
+    }
+  ]
 }
