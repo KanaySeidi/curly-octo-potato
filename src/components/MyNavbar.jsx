@@ -44,7 +44,7 @@ const MyNavbar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" className="navbar">
         <Toolbar disableGutters>
           <Link to="/">
             <Typography
@@ -105,9 +105,14 @@ const MyNavbar = () => {
             <Link to="/admin">
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  textDecoration: "none",
+                }}
               >
-                Admin Page
+                Админ Панель
               </Button>
             </Link>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -116,7 +121,7 @@ const MyNavbar = () => {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
-                  Add product
+                  Внести Продукт
                 </Button>
               </Link>
             </Box>
