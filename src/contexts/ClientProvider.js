@@ -175,7 +175,7 @@ const ClientProvider = (props) => {
         getCart,
         changeCount,
         getDetail,
-        products: state.products,
+        products: currentProducts,
         totalProductsCount,
         productsPerPage,
         currentPage,

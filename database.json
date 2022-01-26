@@ -1,28 +1,20 @@
 {
   "products": [
     {
-      "name": "Zmeya",
-      "breed": "CObra",
-      "price": "12345",
-      "descr": "qwe",
-      "image": "https://panteric.ru/files/gallery/5004/big/webdsc_4522-1_1635435085.jpg",
+      "name": "змея",
+      "breed": "питон",
+      "price": "1000",
+      "descr": "питон",
+      "image": "https://panteric.ru/files/gallery/5004/big/webdsc_4526-1_1635435086.jpg",
       "id": 1
     },
     {
-      "name": "qwe",
-      "breed": "qqe",
-      "price": "qwe",
-      "descr": "wqe",
-      "image": "qweq",
+      "name": "змея",
+      "breed": "королевская кобра",
+      "price": "2000",
+      "descr": "королевская кобра",
+      "image": "https://panteric.ru/files/gallery/4754/big/dsc_2206-1_1641500686.jpg",
       "id": 2
-    },
-    {
-      "name": "qweq",
-      "breed": "qweqw",
-      "price": "qweqw",
-      "descr": "qweqw",
-      "image": "qweq",
-      "id": 3
     }
   ]
 }

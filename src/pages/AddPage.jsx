@@ -32,7 +32,7 @@ const AddPage = () => {
   };
 
   return (
-    <div>
+    <div className="add-edit-page">
       <Container>
         <h2>Add Page</h2>
         <form onSubmit={handleSubmit}>
@@ -56,6 +56,7 @@ const AddPage = () => {
             }
             label="Введите цену"
             variant="standard"
+            type="number"
           />
           <TextareaAutosize
             onChange={(e) =>

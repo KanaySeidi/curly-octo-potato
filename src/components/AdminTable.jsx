@@ -50,7 +50,7 @@ export default function AdminTable() {
                 </Button>
               </TableCell>
               <TableCell>
-                <Link to={`/admin-panel/edit/${item.id}`}>
+                <Link to={`/admin/add/${item.id}`}>
                   <Button color="warning" variant="contained">
                     Изменить
                   </Button>

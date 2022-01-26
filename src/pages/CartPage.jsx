@@ -1,9 +1,14 @@
+import { Container } from "@mui/material";
 import React from "react";
+import CartTable from "../components/CartTable";
 
 const CartPage = () => {
   return (
     <div>
-      <h2>Card Page</h2>
+      <Container>
+        <h2>Card Page</h2>
+        <CartTable />
+      </Container>
     </div>
   );
 };

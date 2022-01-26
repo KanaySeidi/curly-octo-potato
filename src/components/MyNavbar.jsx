@@ -7,20 +7,22 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import mlogo from "../images/snake-logo.png";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
-import { ShoppingCart } from "@material-ui/icons";
+import { Logout, ShoppingCart } from "@mui/icons-material";
 import { ClientContext } from "../contexts/ClientProvider";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const MyNavbar = () => {
   const { cartCount } = React.useContext(ClientContext);
+  const { authWithGoogle, user, logout } = React.useContext(AuthContext);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -108,16 +110,16 @@ const MyNavbar = () => {
                 Admin Page
               </Button>
             </Link>
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Link to="/admin/add">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                Add product
-              </Button>
-            </Link>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <Link to="/admin/add">
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  Add product
+                </Button>
+              </Link>
+            </Box>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
