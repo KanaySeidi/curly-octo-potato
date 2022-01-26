@@ -42,6 +42,7 @@ const AddPage = () => {
             }
             label="Введите название"
             variant="standard"
+            value={newProduct.name}
           />
           <TextField
             onChange={(e) =>
@@ -49,14 +50,16 @@ const AddPage = () => {
             }
             label="Введите породу"
             variant="standard"
+            value={newProduct.breed}
           />
           <TextField
             onChange={(e) =>
-              setNewProduct({ ...newProduct, price: e.target.value })
+              setNewProduct({ ...newProduct, price: parseInt(e.target.value) })
             }
             label="Введите цену"
             variant="standard"
             type="number"
+            value={newProduct.price}
           />
           <TextareaAutosize
             onChange={(e) =>
@@ -64,6 +67,7 @@ const AddPage = () => {
             }
             minRows={4}
             placeholder="Введите описание"
+            value={newProduct.descr}
           />
           <TextField
             onChange={(e) =>
@@ -71,6 +75,7 @@ const AddPage = () => {
             }
             label="Введите фото"
             variant="standard"
+            value={newProduct.image}
           />
           <Button type="submit" variant="caontained">
             Добавить
