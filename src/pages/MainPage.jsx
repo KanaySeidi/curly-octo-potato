@@ -1,9 +1,8 @@
-import { Container, Grid, Pagination } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React, { useContext, useEffect } from "react";
-// import FiltersBlock from "../components/FiltersBlock";
 import ProductCard from "../components/ProductCard";
 import { ClientContext } from "../contexts/ClientProvider";
-// import ProductsPagination from "../components/ProductsPagination";
+import FiltersBlock from "../components/FilterBlock";
 
 const MainPage = () => {
   const { getProducts, products } = useContext(ClientContext);
@@ -11,14 +10,16 @@ const MainPage = () => {
   useEffect(() => {
     getProducts();
   }, []);
+
   if (!products) {
-    return <h2>Loading ...</h2>;
+    return <h2>Loading ... ... ...</h2>;
   }
+
   return (
     <div>
       <Container>
         <h2>Main Page</h2>
-        {/* <FiltersBlock /> */}
+        <FiltersBlock />
         <Grid container spacing={4}>
           {products.map((item) => (
             <Grid xs={12} sm={6} md={4} item key={item.id}>
@@ -26,7 +27,6 @@ const MainPage = () => {
             </Grid>
           ))}
         </Grid>
-        {/* <ProductsPagination /> */}
       </Container>
     </div>
   );

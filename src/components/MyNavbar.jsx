@@ -12,11 +12,16 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import mlogo from "../images/snake-logo.png";
 import { Link } from "react-router-dom";
+import { Badge } from "@mui/material";
+import { ShoppingCart } from "@material-ui/icons";
+import { ClientContext } from "../contexts/ClientProvider";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const ResponsiveAppBar = () => {
+const MyNavbar = () => {
+  const { cartCount } = React.useContext(ClientContext);
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -116,16 +121,34 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton
-                onClick={handleOpenUserMenu}
-                sx={{ p: 0 }}
-              ></IconButton>
-            </Tooltip>
+            <Link to="/cart">
+              <IconButton size="large" color="inherit">
+                <Badge color="error" badgeContent={cartCount}>
+                  <ShoppingCart />
+                </Badge>
+              </IconButton>
+            </Link>
+            {user ? (
+              <>
+                <IconButton size="small" color="inherit">
+                  {user.displayName}
+                </IconButton>
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar alt={user.displayName} src={user.photoURL} />
+                </IconButton>
+                <IconButton onClick={logout} size="large" color="inherit">
+                  <Logout />
+                </IconButton>
+              </>
+            ) : (
+              <IconButton onClick={authWithGoogle} size="small" color="inherit">
+                Войти
+              </IconButton>
+            )}
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
+export default MyNavbar;
