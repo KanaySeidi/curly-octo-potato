@@ -18,7 +18,7 @@ const MainPage = () => {
   }
 
   return (
-    <div>
+    <div className="main-page-video">
       <Container>
         <h2 style={{ color: "white" }}>Main Page</h2>
         <video autoPlay loop muted>

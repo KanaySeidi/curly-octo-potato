@@ -26,7 +26,7 @@ export default function ProductCard(props) {
         height="210"
         src={props.item.image}
         alt="animal-png"
-        style={{ objectFit: "cover", objectPosition: "center -30px" }}
+        style={{ objectFit: "cover", objectPosition: "center -50px" }}
       />
       <CardContent>
         <Typography
@@ -35,11 +35,10 @@ export default function ProductCard(props) {
           variant="h5"
           component="div"
         >
-          {props.item.name}
+          {props.item.breed}
         </Typography>
         <hr />
         <Typography variant="body2" color="text.secondary">
-          Порода: {props.item.breed}
           <br />
           Цена: {props.item.price}
         </Typography>
