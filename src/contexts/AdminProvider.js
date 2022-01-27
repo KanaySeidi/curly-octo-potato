@@ -56,7 +56,7 @@ const AdminProvider = (props) => {
 
   const saveEditedProduct = async (productEdit) => {
     try {
-      await axios.patch(`${API}/${productEdit.id}, productEdit`);
+      await axios.patch(`${API}/${productEdit.id}`, productEdit);
       getProducts();
     } catch (error) {
       console.log(error);
