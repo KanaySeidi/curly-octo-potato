@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { ClientContext } from "../contexts/ClientProvider";
-import { Button, TableFooter } from "@mui/material";
+import { Button, Link, TableFooter } from "@mui/material";
 
 export default function CartTable() {
   const { getCart, cart, changeCount } = React.useContext(ClientContext);
@@ -83,7 +83,9 @@ export default function CartTable() {
         </Table>
       </TableContainer>
       <div className="order-btn">
-        <Button variant="contained"> Оформить в заказ</Button>
+        <Link to="/checkout">
+          <Button variant="contained"> Оформить в заказ</Button>
+        </Link>
       </div>
     </>
   );
