@@ -4,6 +4,7 @@ import ProductCard from "../components/ProductCard";
 import { ClientContext } from "../contexts/ClientProvider";
 import FiltersBlock from "../components/FilterBlock";
 import mainHeader from "../videos/main-header.mp4";
+import ProductsPagination from "../components/ProductPagination";
 
 const MainPage = () => {
   const { getProducts, products } = useContext(ClientContext);
@@ -31,6 +32,7 @@ const MainPage = () => {
             </Grid>
           ))}
         </Grid>
+        <ProductsPagination />
       </Container>
     </div>
   );

@@ -1,14 +1,6 @@
 {
   "products": [
     {
-      "name": "Змея",
-      "breed": "Питон ",
-      "price": 1000,
-      "descr": "йцу",
-      "image": "https://rutradeonline.ru/wp-content/uploads/2021/01/53f7a5d0-1a6b-4e1e-ad00-698950e403bf.jpg",
-      "id": 1
-    },
-    {
       "name": "змея",
       "breed": "питон",
       "price": 2000,

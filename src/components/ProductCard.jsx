@@ -18,13 +18,15 @@ export default function ProductCard(props) {
     <Card
       sx={{ maxWidth: 345, background: "transparent" }}
       className="main-card"
+      height="100"
+      width="80"
     >
       <CardMedia
         component="img"
-        height="120"
+        height="210"
         src={props.item.image}
         alt="animal-png"
-        style={{ objectFit: "contain" }}
+        style={{ objectFit: "cover", objectPosition: "center -30px" }}
       />
       <CardContent>
         <Typography
