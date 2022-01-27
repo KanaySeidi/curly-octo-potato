@@ -174,8 +174,23 @@ video {
   margin: 8px 0;
 }
 
-@media screen and (max-width: 1279) {
-  .main-page-video > video {
-    background-color: limegreen;
+@media screen and (max-width: 1279px) {
+  .main-video {
+    display: none;
+  }
+
+  .filters-block {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .filters-block div:first-child {
+    width: 100%;
+  }
+
+  .filters-block div:nth-child(2) {
+    width: 100%;
+    margin: 10px 0;
   }
 }

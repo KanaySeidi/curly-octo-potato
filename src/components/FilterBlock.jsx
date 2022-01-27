@@ -30,6 +30,7 @@ const FiltersBlock = () => {
     <div className="filters-block">
       <div>
         <TextField
+          className="live-search"
           value={searchValue}
           onChange={(e) => filterProducts("q", e.target.value)}
           variant="outlined"
@@ -40,6 +41,7 @@ const FiltersBlock = () => {
       <div>
         <Box sx={{ width: 300 }}>
           <Slider
+            className="slider"
             onChange={(e) => filterProducts("price_lte", e.target.value)}
             valueLabelDisplay="auto"
             max={200000}
@@ -48,7 +50,12 @@ const FiltersBlock = () => {
         </Box>
       </div>
       <div>
-        <Button onClick={resetFilter} variant="contained" color="inherit">
+        <Button
+          className="filter-btn"
+          onClick={resetFilter}
+          variant="contained"
+          color="inherit"
+        >
           Сбросить
         </Button>
       </div>

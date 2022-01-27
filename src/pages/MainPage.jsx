@@ -5,6 +5,7 @@ import { ClientContext } from "../contexts/ClientProvider";
 import FiltersBlock from "../components/FilterBlock";
 import mainHeader from "../videos/main-header.mp4";
 import ProductsPagination from "../components/ProductPagination";
+import { style } from "@mui/system";
 
 const MainPage = () => {
   const { getProducts, products } = useContext(ClientContext);
@@ -21,7 +22,7 @@ const MainPage = () => {
     <div className="main-page-video">
       <Container>
         <h2 style={{ color: "white" }}>Main Page</h2>
-        <video autoPlay loop muted>
+        <video className="main-video" autoPlay loop muted>
           <source src={mainHeader} type="video/mp4" />
         </video>
         <FiltersBlock />
