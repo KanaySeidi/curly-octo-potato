@@ -54,7 +54,7 @@ const DetailPage = () => {
                 <Button
                   onClick={() => deleteProductFromCart(detail.id)}
                   size="small"
-                  variant="contained"
+                  variant="standart"
                   color="warning"
                 >
                   В Корзине

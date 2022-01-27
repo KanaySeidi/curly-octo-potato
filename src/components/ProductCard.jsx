@@ -15,7 +15,10 @@ export default function ProductCard(props) {
     React.useContext(ClientContext);
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card
+      sx={{ maxWidth: 345, background: "transparent" }}
+      className="main-card"
+    >
       <CardMedia
         component="img"
         height="120"
@@ -54,6 +57,7 @@ export default function ProductCard(props) {
             onClick={() => addProductToCart(props.item)}
             size="small"
             variant="contained"
+            style={{ background: "gray" }}
           >
             Корзина
           </Button>
@@ -62,7 +66,11 @@ export default function ProductCard(props) {
           style={{ marginLeft: 20 }}
           to={`/product-detail/${props.item.id}`}
         >
-          <Button size="small" variant="contained">
+          <Button
+            size="small"
+            variant="contained"
+            style={{ background: "gray" }}
+          >
             Подробнее
           </Button>
         </Link>

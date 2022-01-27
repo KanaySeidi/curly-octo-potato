@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
 import { ClientContext } from "../contexts/ClientProvider";
 import FiltersBlock from "../components/FilterBlock";
+import mainHeader from "../videos/main-header.mp4";
 
 const MainPage = () => {
   const { getProducts, products } = useContext(ClientContext);
@@ -18,7 +19,10 @@ const MainPage = () => {
   return (
     <div>
       <Container>
-        <h2>Main Page</h2>
+        <h2 style={{ color: "white" }}>Main Page</h2>
+        <video autoPlay loop muted>
+          <source src={mainHeader} type="video/mp4" />
+        </video>
         <FiltersBlock />
         <Grid container spacing={4}>
           {products.map((item) => (

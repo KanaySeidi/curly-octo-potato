@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import mlogo from "../images/snake-logo.png";
+import mlogo from "../images/medusa.png";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
 import { Logout, ShoppingCart } from "@mui/icons-material";
@@ -123,6 +123,11 @@ const MyNavbar = () => {
                 >
                   Внести Продукт
                 </Button>
+              </Link>
+              <Link to="/">
+                <h2>
+                  <strong>medusa Gargona</strong>
+                </h2>
               </Link>
             </Box>
           </Box>

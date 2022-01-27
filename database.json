@@ -9,11 +9,11 @@
       "id": 1
     },
     {
-      "name": "er6rrur",
-      "breed": "45te4",
-      "price": "035436457",
-      "descr": "yrtryrdur",
-      "image": "dryeyer",
+      "name": "змея",
+      "breed": "питон",
+      "price": 2000,
+      "descr": "питон змея",
+      "image": "https://panteric.ru/files/gallery/4754/big/dsc_2206-1_1641500686.jpg",
       "id": 2
     }
   ]
