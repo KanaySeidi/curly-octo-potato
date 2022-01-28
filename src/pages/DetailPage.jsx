@@ -22,21 +22,28 @@ const DetailPage = () => {
     return <h2>Loading ...</h2>;
   }
   return (
-    <div>
+    <div className="detail-div">
       <Container>
         <h2>Detail Page</h2>
-        <Link to="/">
-          <Button>Домой</Button>
-        </Link>
-        <Button onClick={() => navigate(-1)} variant="text">
-          Назад
-        </Button>
+        <div className="nav-btn">
+          <Link to="/">
+            <Button variant="contained" color="success">
+              Домой
+            </Button>
+          </Link>
+          <Button
+            onClick={() => navigate(-1)}
+            variant="contained"
+            color="success"
+          >
+            Назад
+          </Button>
+        </div>
         <div className="detail-page">
           <div className="detail-left-img">
             <img src={detail.image} alt="detail-img" />
           </div>
           <div className="detail-right">
-            <h3>{detail.name}</h3>
             <ul>
               <li>
                 Бренд: <strong>{detail.breed}</strong>
@@ -49,12 +56,12 @@ const DetailPage = () => {
                 Описание: <strong>{detail.descr}</strong>
               </li>
             </ul>
-            <div>
+            <div className="detail-cart">
               {checkProductInCart(detail.id) ? (
                 <Button
                   onClick={() => deleteProductFromCart(detail.id)}
                   size="small"
-                  variant="standart"
+                  variant="contained"
                   color="warning"
                 >
                   В Корзине
@@ -64,6 +71,7 @@ const DetailPage = () => {
                   onClick={() => addProductToCart(detail)}
                   size="small"
                   variant="contained"
+                  color="success"
                 >
                   Корзина
                 </Button>

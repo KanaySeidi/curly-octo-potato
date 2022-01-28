@@ -5,7 +5,6 @@ import { ClientContext } from "../contexts/ClientProvider";
 import FiltersBlock from "../components/FilterBlock";
 import mainHeader from "../videos/main-header.mp4";
 import ProductsPagination from "../components/ProductPagination";
-import { style } from "@mui/system";
 
 const MainPage = () => {
   const { getProducts, products } = useContext(ClientContext);

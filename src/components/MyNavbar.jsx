@@ -18,7 +18,6 @@ import { ClientContext } from "../contexts/ClientProvider";
 import { AuthContext } from "../contexts/AuthProvider";
 
 const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const MyNavbar = () => {
   const { cartCount } = React.useContext(ClientContext);
@@ -132,32 +131,38 @@ const MyNavbar = () => {
             </Box>
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Link to="/cart">
-              <IconButton size="large" color="inherit">
-                <Badge color="error" badgeContent={cartCount}>
-                  <ShoppingCart />
-                </Badge>
-              </IconButton>
-            </Link>
-            {user ? (
-              <>
-                <IconButton size="small" color="inherit">
-                  {user.displayName}
+          <div className="navbar-right">
+            <Box sx={{ flexGrow: 0 }}>
+              <Link to="/cart">
+                <IconButton size="large" color="inherit">
+                  <Badge color="error" badgeContent={cartCount}>
+                    <ShoppingCart />
+                  </Badge>
                 </IconButton>
-                <IconButton sx={{ p: 0 }}>
-                  <Avatar alt={user.displayName} src={user.photoURL} />
+              </Link>
+              {user ? (
+                <>
+                  <IconButton size="small" color="inherit">
+                    {user.displayName}
+                  </IconButton>
+                  <IconButton sx={{ p: 0 }}>
+                    <Avatar alt={user.displayName} src={user.photoURL} />
+                  </IconButton>
+                  <IconButton onClick={logout} size="large" color="inherit">
+                    <Logout />
+                  </IconButton>
+                </>
+              ) : (
+                <IconButton
+                  onClick={authWithGoogle}
+                  size="small"
+                  color="inherit"
+                >
+                  Войти
                 </IconButton>
-                <IconButton onClick={logout} size="large" color="inherit">
-                  <Logout />
-                </IconButton>
-              </>
-            ) : (
-              <IconButton onClick={authWithGoogle} size="small" color="inherit">
-                Войти
-              </IconButton>
-            )}
-          </Box>
+              )}
+            </Box>
+          </div>
         </Toolbar>
       </Container>
     </AppBar>

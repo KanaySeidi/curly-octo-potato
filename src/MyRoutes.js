@@ -6,11 +6,12 @@ import AdminPage from "./pages/AdminPage";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/DetailPage";
 import EditPage from "./pages/EditPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import WelcomePage from "./pages/WelcomePage";
 import MyNavbar from "./components/MyNavbar";
 import AdminProvider from "./contexts/AdminProvider";
 import ClientProvider from "./contexts/ClientProvider";
 import AuthProvider from "./contexts/AuthProvider";
-import CheckoutPage from "./pages/CheckoutPage";
 
 const MyRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const MyRoutes = () => {
               <Route path="/product-detail/:id" element={<DetailPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
+              <Route path="/checkout/welcome" element={<WelcomePage />} />
             </Routes>
           </BrowserRouter>
         </ClientProvider>

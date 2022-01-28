@@ -46,6 +46,7 @@ const FiltersBlock = () => {
             valueLabelDisplay="auto"
             max={200000}
             step={1000}
+            color="success"
           />
         </Box>
       </div>
@@ -54,7 +55,7 @@ const FiltersBlock = () => {
           className="filter-btn"
           onClick={resetFilter}
           variant="contained"
-          color="inherit"
+          color="success"
         >
           Сбросить
         </Button>

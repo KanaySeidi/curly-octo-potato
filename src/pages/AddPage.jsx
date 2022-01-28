@@ -77,7 +77,7 @@ const AddPage = () => {
             variant="standard"
             value={newProduct.image}
           />
-          <Button type="submit" variant="caontained">
+          <Button type="submit" variant="contained" color="success">
             Добавить
           </Button>
         </form>

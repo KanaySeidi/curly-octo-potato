@@ -58,7 +58,7 @@ export default function ProductCard(props) {
             onClick={() => addProductToCart(props.item)}
             size="small"
             variant="contained"
-            style={{ background: "gray" }}
+            color="success"
           >
             Корзина
           </Button>
@@ -67,11 +67,7 @@ export default function ProductCard(props) {
           style={{ marginLeft: 20 }}
           to={`/product-detail/${props.item.id}`}
         >
-          <Button
-            size="small"
-            variant="contained"
-            style={{ background: "gray" }}
-          >
+          <Button size="small" variant="contained" color="success">
             Подробнее
           </Button>
         </Link>
